@@ -3,12 +3,12 @@ num2=float(input('num2:'))
 op=input('输入运算符:')
 match op:
     case '+':
-        print(num1+num2)
+        print(f"{num1} + {num2} = {num1 + num2}")
     case '-':
-        print(num1-num2)
+        print(f"{num1} - {num2} = {num1 - num2}")
     case '*':
-        print(num1*num2)
-    case '/':
-        print(num1/num2)
+        print(f"{num1} * {num2} = {num1 * num2}")
+    case '/' if num2:
+        print(f"{num1} / {num2} = {num1 / num2}")
     case _:
         print("error")
