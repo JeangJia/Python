@@ -9,6 +9,6 @@ match op:
     case '*':
         print(f"{num1} * {num2} = {num1 * num2}")
     case '/' if num2:
-        print(f"{num1} / {num2} = {num1 / num2}")
+        print(f"{num1} / {num2} = {(num1 / num2):.1f}")
     case _:
         print("error")
