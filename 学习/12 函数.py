@@ -1,3 +1,6 @@
+import math
+
+
 def calc_score1(score_list):
     """
     计算最低分,最高分,平均分
@@ -20,7 +23,7 @@ print(a, b, c)
 """
 
 
-def calc_score2(*args, **kwargs):
+def calc_score2(*args: int, **kwargs):
     ret_min = min(args)
     ret_max = max(args)
     ret_avg = sum(args) / len(args)
@@ -39,7 +42,15 @@ out_line = lambda: print("------------------")
 out_line()
 
 # sort()
-# 类型注解
 s: list[int] = [123, 345, 23, 3, 23, 67547]
 s.sort(key=lambda x: len(str(x)))
 print(s)
+out_line()
+
+
+# 函数类型注解
+def circle_area_len(r: float = 0) -> tuple[float, float]:
+    return round(math.pi * (r ** 2), 2), round(math.pi * r * 2, 2)
+
+
+print(circle_area_len(10))
