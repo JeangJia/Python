@@ -39,6 +39,7 @@ out_line = lambda: print("------------------")
 out_line()
 
 # sort()
-s = [123, 345, 23, 3, 23, 67547]
+# 类型注解
+s: list[int] = [123, 345, 23, 3, 23, 67547]
 s.sort(key=lambda x: len(str(x)))
 print(s)
