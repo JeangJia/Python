@@ -1,3 +1,13 @@
-s=[12,34,12,567,324,45,12,3,67]
-t=[i**2 for i in s if not i%2]
-print(t)
+from pathlib import Path
+import json
+
+path = Path('demo_text.txt')
+
+if __name__ == "__main__":
+    if path.exists():
+        print(f"Hello {path.read_text()}")
+    else:
+        name = str(input("what is your name?"))
+        path.write_text(name)
+
+# path.unlink()  # 删除路径文件
