@@ -99,22 +99,27 @@ class EduManageMent:
             print("0. 退出系统")
             print("=" * 40)
             choice = input("请输入操作序号：")
-            match choice:
-                case "1":
-                    self.add_student()
-                case "2":
-                    self.update_student()
-                case "3":
-                    self.del_student()
-                case "4":
-                    self.find_students()
-                case "5":
-                    self.show_students()
-                case "0":
-                    print("退出系统成功！")
-                    break
-                case _:
-                    print("输入无效，请重新输入！")
+            try:
+                match choice:
+                    case "1":
+                        self.add_student()
+                    case "2":
+                        self.update_student()
+                    case "3":
+                        self.del_student()
+                    case "4":
+                        self.find_students()
+                    case "5":
+                        self.show_students()
+                    case "0":
+                        print("退出系统成功！")
+                        break
+                    case _:
+                        print("输入无效，请重新输入！")
+            except ValueError:
+                print("类型有误,检查后重新输入!")
+            except Exception as e:
+                print("程序运行出错了!")
 
 
 if __name__ == '__main__':
