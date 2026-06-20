@@ -4,7 +4,7 @@ from lxml import html
 import requests
 import csv
 
-MOVIE_LIST_FILE = '20 movie.csv'
+MOVIE_LIST_FILE = '08 movie.csv'
 URL = 'https://www.themoviedb.org/movie/top-rated'  # 第一页(前20)
 URL_2 = 'https://www.themoviedb.org/discover/movie/items'  # 第二页(后80)
 ind = 1
